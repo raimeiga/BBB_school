@@ -1,11 +1,24 @@
+
+// ここからヘッダー
 const logoMenu = document.getElementById('logo-menu');
-
 const navMenu = document.getElementById('nav-menu');
-
-
-  // HTML要素がクリックされたときにイベント処理を実行する
-  logoMenu.addEventListener('click', () => {
-    logoMenu.style.display = 'block';
+// イベント処理
+logoMenu.addEventListener('click', () => {
     navMenu.style.display = 'block';
   });
+
+const close = document.getElementById('close');
+// イベント処理
+close.addEventListener('click', () => {
+    navMenu.style.display = 'none';
+  });
+
+//   ここまでヘッダー
+
+
+
+
+
+
+
 

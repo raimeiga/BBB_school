@@ -5,18 +5,19 @@ html {
 
 /* ここからheader */
 
+
 /* BBB英会話スクールのロゴ */
 #logo-BBB {
-    width: 150px;
+  width: 150px;    
 }
 
 /* ハンバーガーメニューの三本線のロゴ */
 #logo-menu {
-    position:absolute;  
-    width: 50px
-    height: 50px;
-    top: 0;
-    right: 0;
+  position:absolute;  
+  top: 0;
+  right: 0;
+  width: 50px
+  height: 50px;  
 }
 
 #nav-menu { 
@@ -30,18 +31,38 @@ html {
     z-index: 100;
   }
 
-  /* ☓マークのロゴ */
+  
+
+  #logo-BBB-white {
+    width: 150px;
+  }
+
+/* ☓マークのロゴ */
   #close {
     position: absolute;
     top: 20px;
     right: 20px;
   }
 
-  #nav-menu > a {
+
+
+  #menu {
     display: block;
+    list-style: none;
+    color: white;
+    text-align: center;
+    font-family: "游ゴシック";
+    font-size: 25px;
+    font-weight: bold;
+    
   }
 
-  
+  .menu-list {
+    margin: 20px;
+  }
+   
+
+
 /* ここからbody */
 
   
