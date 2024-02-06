@@ -1,14 +1,26 @@
 html {
     font-family: "游ゴシック";
-    position: relative;
+    
 }
 
+
+
 /* ここからheader */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
 
 
 /* BBB英会話スクールのロゴ */
 #logo-BBB {
-  width: 150px;    
+  width: 150px; 
+  position:absolute;  
+  top: 50px;
+  left: 40px;
+  
 }
 
 /* ハンバーガーメニューの三本線のロゴ */
@@ -16,8 +28,7 @@ html {
   position:absolute;  
   top: 0;
   right: 0;
-  width: 50px
-  height: 50px;  
+  width: 140px   
 }
 
 #nav-menu { 
@@ -25,7 +36,7 @@ html {
     position: absolute;
     right: 0;
     top: 0;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     display: none;
     z-index: 100;
@@ -42,6 +53,7 @@ html {
     position: absolute;
     top: 20px;
     right: 20px;
+    width: 70px;  
   }
 
 
