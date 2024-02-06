@@ -4,13 +4,20 @@ html {
 }
 
 
+/* body {
+  margin: 0 auto 0 auto;
+} */
+
+
 
 /* ここからheader */
 
 header {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10; 
 }
 
 
@@ -32,6 +39,7 @@ header {
 }
 
 #nav-menu { 
+  position: fixed;
     background-color: red;
     position: absolute;
     right: 0;
@@ -40,9 +48,7 @@ header {
     width: 100%;
     display: none;
     z-index: 100;
-  }
-
-  
+  }  
 
   #logo-BBB-white {
     width: 150px;
@@ -56,8 +62,6 @@ header {
     width: 70px;  
   }
 
-
-
   #menu {
     display: block;
     list-style: none;
@@ -66,7 +70,6 @@ header {
     font-family: "游ゴシック";
     font-size: 25px;
     font-weight: bold;
-    
   }
 
   .menu-list {
@@ -75,10 +78,33 @@ header {
    
 
 
-/* ここからbody */
+/* ここからmain */
 
+#main-visual {
+  height: 500px;
+  margin-top: 60px;
+  position: relative;
+}
   
+#main-message {
+  position: absolute;
+    top: 100;
+    left: 100;
+  color: black;
+  max-width: 620px;
+  height: 100%;
+  width: 100%;
+  z-index: 11;
 
+}
+
+#main-visual > img {
+  max-width: 620px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+} */
 
 
 
