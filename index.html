@@ -6,7 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <!-- css読み込むときにディレクトリ（フォルダ階層）注意 -->
-        <link rel="stylesheet" href="css/style.css">          
+        <link rel="stylesheet" href="css/style.css">         
+        
+        <!-- jquery -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <!-- jquery.inview.min.js（フェードインさせるためのプラグインのファイルを読み込む）が下 -->
+        <script type="text/javascript" src="./js/jquery.inview.min.js"></script>   
     </head>
 
   <body>
@@ -78,9 +83,49 @@
                  </div>
                 </div>
             </div>
+        </section>
+        
+        <section id="section-3">
+            <div id="student-voice">
+                <h1>受講生の声</h1>
+            </div>
+            
+            <div id="voice01">
+                <div id="voice01-child01" >
+                    <img id="student01-img" src="images/icon-student1.png" alt="生徒1">
+                    <div class="introduction">○○○さん<br>大学生</div>
+                </div>
+                <div id="voice01-child02">
+                    <p>こんにちは。これは例です。</p>
+                </div>
+            </div>    
+            
+            <div id="voice02">
+                <div id="voice02-child01">
+                    <p>こんにちは。これは例です。</p>
+                </div>
+                <div id="voice02-child02" >
+                    <img id="student02-img" src="images/icon-student2.png" alt="生徒2">
+                    <div class="introduction">○○○さん<br>会社員</div>
+                </div>                
+            </div>    
+
+
+
+            <div id="voice03">
+                <div id="voice03-child01" >
+                    <img id="student03-img" src="images/icon-student3.png" alt="生徒3">
+                    <div class="introduction">○○○さん<br>自営業</div>
+                </div>
+                <div id="voice03-child02">
+                    <p>こんにちは。これは例です。</p>
+                </div>
+            </div>    
 
 
         </section>
+        
+
         <section>   
             <div>              
                 <h1>まずは無料で、BBBの英会話を試してみませんか？</h1>            
@@ -133,7 +178,9 @@
         </div>        
         <p id="copyright">&copy; BBB English School</p>
     </footer>
+    
     <!-- ヘッダーのロゴ（'logo-menu','close')をクリック後のイベント処理をjsに書いたので、bodyの最後に書いておく -->
-    <script src="js/script.js"></script>
+    <script src="js/script.js"></script>  
+    
   </body>
 </html>
