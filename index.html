@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="css/style.css">          
     </head>
 
-   <body>
+  <body>
     <header>
         <img id="logo-bbb" src="images/logo-r.svg" alt="BBB英会話スクールのロゴ 左上">
         <img id="logo-menu" src="images/sozai_cman_jp_20240204094845.png" alt="ナビゲーションを開く">
@@ -36,8 +36,7 @@
         </nav>
     </header>
 
-    <main>
-        <article>
+    <main>      
         <section id="section-1">
             <div id="main-message">
                 <h1>話して学ぼう！<br>BBB英会話スクール</h1>
@@ -58,26 +57,83 @@
                <h1>BBBが選ばれる理由</h1>
             </div>
             <div id="red-background">
-               <div class="white-inside">
-
-
+               <div id="white-background-1">
+                 <div>
+                    <img id="icon-pc" src="images/icon-pc.png" alt="PCのアイコン">
+                 </div>
+                 <div id="icon-pc-right">
+                    <div class="icon-right-1">オンライン対応</div>
+                    <div class="icon-right-2">24時間いつでも受講できる！</div>
+                    <!-- <h1>オンライン対応</h1>
+                    <p>24時間いつでも受講できる！</p> -->
+                 </div>
                </div>
-
-               <div class="white-inside">
-
-
-               </div>
-
+               <div id="white-background-2">
+                <div>
+                    <img id="icon-teacher" src="images/icon-teacher.png" alt="PCのアイコン">
+                 </div>
+                 <div id="icon-teacher-right">
+                    <div class="icon-right-1">講師はネイティブ</div>
+                    <div class="icon-right-2">お気に入りの講師が自由に選べる！</div>
+                 </div>
+                </div>
             </div>
 
 
         </section>
-    </article>
+        <section>   
+            <div>              
+                <h1>まずは無料で、BBBの英会話を試してみませんか？</h1>            
+                <h3>今なら初月のレッスンを特別価格で受講できる割引クーポンをプレゼント！</h3>
+                <h1>無料体験に申し込む</h1>
+            </div>
+        </section>
+      
     </main>
 
+    <footer>
+        <div  class="flexbox-container">
+            <div class="flexbox-item">
+                <p>コース一覧</p>
+                <ul class="delete">
+                    <li>スタンダードプラン</li>
+                    <li>プレミアムプラン</li>
+                    <li>短期集中プラン</li>
+                    <li>日常英会話コース</li>
+                    <li>ビジネス英会話コース</li>
+                </ul>
+            </div>
+            
+            <div class="flexbox-item">
+                <p>講師紹介</p>
+                <ul class="delete">
+                    <li>講師について</li>
+                    <li>講師一覧</li>
+                    <li>講師を探す</li>
+                </ul>
+            </div>
 
+            <div class="flexbox-item">
+                <p>会社情報</p>
+                <ul class="delete">
+                    <li>会社概要</li>
+                    <li>採用情報</li>                    
+                </ul>
+            </div>
+
+            <div class="flexbox-item">
+                <p>BBBについて</p>
+                <ul class="delete">
+                    <li>よくあるご質問</li>
+                    <li>ご利用規約</li>
+                    <li>プライバシーポリシー </li>
+                    <li>お問い合わせ</li>                
+                </ul>
+            </div>
+        </div>        
+        <p id="copyright">&copy; BBB English School</p>
+    </footer>
     <!-- ヘッダーのロゴ（'logo-menu','close')をクリック後のイベント処理をjsに書いたので、bodyの最後に書いておく -->
     <script src="js/script.js"></script>
-   </body>
-
+  </body>
 </html>
