@@ -170,18 +170,18 @@ https://loglogme.com/news/news-1439/　　*/
   height: 720px;
   z-index: 11;
   opacity: 0;
-  /* ↓　12sは、切り替え間隔（4秒）× 画像の枚数（3枚） */
-  animation: change-img-anim 12s infinite;
+  /* ↓　15sは、切り替え間隔（5秒）× 画像の枚数（3枚） */
+  animation: change-img-anim 15s infinite;
 }
 
 .image:nth-of-type(1) {
 	animation-delay: 0s;
 }
 .image:nth-of-type(2) {
-	animation-delay: 4s;
+	animation-delay: 5s;
 }
 .image:nth-of-type(3) {
-	animation-delay: 8s;
+	animation-delay: 10s;
 }
 
 /* 「keyframesの枚数別パーセンテージ」をコピペ */
@@ -312,12 +312,13 @@ https://loglogme.com/news/news-1439/　　*/
 /* 受験生の声 */
 #section-3 {
   width: 100%;
-  height: 890px;
+  height: 770px;
+  margin-bottom: 120px;
 }
 
 /* 受講生の声1 */
 #voice01 {
-  width: 620px;
+  width: 820px;
   height: 150px;
   margin-left: auto;
   margin-right: auto;
@@ -388,13 +389,13 @@ https://loglogme.com/news/news-1439/　　*/
 
 /* 受講生の声2 */
 #voice02 {
-  width: 620px;
+  width: 820px;
   height: 150px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 75px;
   display: flex;
-  justify-content: flex-start; 
+  justify-content: flex-end; 
   /* background-color: yellow; */
 
   /* 拡大しながらフェードイン */
@@ -460,7 +461,7 @@ https://loglogme.com/news/news-1439/　　*/
 
 /* 受講生の声3 */
 #voice03 {
-  width: 620px;
+  width: 820px;
   height: 150px;
   margin-left: auto;
   margin-right: auto;
@@ -526,6 +527,111 @@ https://loglogme.com/news/news-1439/　　*/
   margin: 5px;
   padding: 1px;
 }
+
+/* スクールの概要 */
+
+/* 背景が斜めに動いてるとこ（ここから） */
+#section-4 {  
+  width: 100%;
+  height: 885px;
+  /* ↓3行で背景画像を斜動かすアニメーション */
+  background-image: url(/images/bg.gif); /* image url*/
+  background-size: 700px 700px; /* image size */
+  animation: bg   10s  infinite    linear  reverse; 
+  /* ↑は各々/名前/秒数/ループの回数/進行度　/アニメーションの向き */  
+}
+
+/* ↑animationの名前bgを↓keyframesの直後に書き、一致させる */
+@keyframes bg {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 700px -700px;
+  }
+}
+/* 背景が斜めに動いてるとこ（ここまで） */
+
+#space {
+  height: 60px;
+}
+
+.wrapper {
+ width: 980px;
+ height: 285px;
+ margin-left: auto;
+ margin-right: auto;
+ margin-bottom: 36px;
+ display: flex;
+ justify-content: center;
+ 
+}
+
+.title-contents {
+  display: inline-block;
+  width: 320px;
+  height: 185px;
+  background-color: #ffffff;
+  text-align: center;
+  padding: 50px;
+  margin: 0 18px;
+  border-radius: 20px;
+}
+
+.title-contents > h3{
+ font-size: 28px;
+ font-family: 游ゴシック;
+ margin: 0;
+}
+
+.title-contents > span {
+  font-size: 18px;
+  font-weight: bolder;
+  margin-bottom: 30px;
+ }
+
+ .title-contents > p {
+  font-size: 16px;
+  margin: 30px;
+ }
+
+ #section-5 {
+  width: 100%;
+  height: 700px;
+ }
+
+ #section-5 > div {
+  background-color: blue;
+  width: 860px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;  
+ }
+ 
+ #section-5 > div > h3 {
+  font-size: 32px;
+  margin-top: 120px;
+  margin-bottom: 8px;
+ }
+
+ #section-5 > div > p {
+  font-size: 18px;
+  padding: 0;
+  margin-top: 0;
+ }
+
+ #section-5 > div > a {
+  font-size: 28px;
+  font-weight: bolder;
+ 
+  background-color: #ff2a2a;
+     
+  color: #ffffff; 
+  border-radius: 40px;
+  padding: 15px;
+  margin-top: 0;
+ }
+
 
 
 
