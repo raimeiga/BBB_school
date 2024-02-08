@@ -9,15 +9,14 @@ header {
   top: 0;
   left: 0; */
   width: 100%;
-  
+  height: 100px;  
 }
 
 #logo-bbb {
   width: 120px; 
   height: 60px;
-  /* position: relative;
-  top: 30px;
-  left: 40px; */
+  margin-top: 30px;
+  margin-left: 40px;
 }
 
 #logo-menu {
@@ -73,29 +72,28 @@ header {
 }
 
 /* ここからmain */
+
 #section-1 {
   position: relative;
-  top: 25px;
-  height: 770px;
-  /* ↓BBBが選ばれる理由」の上の余白をつくるため */
-  margin-bottom: 75px;
+  height:720px;  
+  margin-bottom: 120px;
 }
 
 #main-message {
 position: absolute;
-top: 260px;
+top: 220px;
 left: 120px;
 width: 620px;
 height: 500px;
-font-size: 40px;
-z-index: 12;
-text-shadow: 4px 4px 6px #ffffff;
+z-index: 13;
+}
+
+#main-message > h2 {
+  font-size: 45px;
+  text-shadow: 4px 4px 6px #ffffff;
 }
 
 #free-lesson {  
-  position: absolute;
-  top: 230px;
-  left: 0;
   width: 420px;
   font-size: 20px;
   padding: 3px;
@@ -119,7 +117,7 @@ text-shadow: 4px 4px 6px #ffffff;
  transition: 0.4s; /* 変化の速度 */
 }
 
-#free-lesson-link {
+#free-lesson > a {
   text-decoration: none;
 }
 
@@ -135,30 +133,86 @@ text-shadow: 4px 4px 6px #ffffff;
   width: 70px;  
 }
 
-#main-visual {
-  width: 75%;  
-  height: 770px;
+/* 画像の枠をぼかす（ここから） */
+.visual-container {
+	position: absolute;
+  top: 0;
+  right: 0;
+	width: 75%;  
+  height: 720px;
+  overflow: hidden;
+	} 
+
+.visual-container::after {
+	position: absolute;
+	content: '';
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  /* box-shadow: inset X(↓方向) Y(→方向) ぼかし 拡張 色; */
+	box-shadow: inset 0 0 30px 30px #ffffff;
+  /* box-shadow: inset X(↑方向) Y(←方向) ぼかし 拡張 色; */
+  box-shadow: inset 0 0 30px 30px #ffffff;
+  /*　↓ .visual-containerの上に重ねるための措置 */
+  z-index: 12;	 
+}
+/* 画像の枠をぼかす （ここまで）*/
+
+/* 画像切り替え フェード（ここから）。複雑なので、よくサイトを読む 
+https://1-notes.com/css-replace-images-automatically-animation/
+https://loglogme.com/news/news-1439/　　*/
+.image {
   position: absolute;
   top: 0;
   right: 0;
+  width: 100%;  
+  height: 720px;
   z-index: 11;
+  opacity: 0;
+  /* ↓　12sは、切り替え間隔（4秒）× 画像の枚数（3枚） */
+  animation: change-img-anim 12s infinite;
 }
+
+.image:nth-of-type(1) {
+	animation-delay: 0s;
+}
+.image:nth-of-type(2) {
+	animation-delay: 4s;
+}
+.image:nth-of-type(3) {
+	animation-delay: 8s;
+}
+
+/* 「keyframesの枚数別パーセンテージ」をコピペ */
+@keyframes change-img-anim {
+	0%{ opacity: 0;}
+	20%{ opacity: 1;}
+  33%{ opacity: 1;}
+	63%{ opacity: 0;}
+	100%{ opacity: 0;}
+}
+/* 画像切り替え フェード（ここまで） */
 
 #section-2 {
-  /* position: relative;
-  top: 0px; */
-  height: 800px;
+  position: relative;  
+  height: 756px;
+  margin-bottom: 120px;
 }
 
-#bbb-selected-reason {
-  /* position: absolute; */
-  /* top: 50px; */
-  background-color: blue;
+.section-title {  
   width: 860px;   
-  font-weight: bold;
-  font-family: 游ゴシック;
-  text-align: center;
-  margin: 75px auto 75px auto;
+  font-size: 35px;  
+  text-align: center; 
+  /* ↓marginのtopに100pxを指定しても、親であるsectionの中に100pxが追加されず、
+      sectionの外に100pxが突き出るように追加される。 詳しくは↓のurl。
+      https://natsukimemo.com/css-margin-top-bottom*/
+  margin: 0 auto 100px auto; 
+}
+
+.border-span {
+  padding-bottom: 25px;
+  border-bottom: solid 3px black;  
 }
 
 #red-background {
@@ -180,7 +234,7 @@ text-shadow: 4px 4px 6px #ffffff;
   border-radius: 0 20px 20px 0;
   display: flex;
   justify-content: center;  
-/* フェードイン（左から出てくるように） */
+  /* フェードイン（左から出てくるように） */
   opacity: 0;
   visibility: hidden;
   transform: translateX(-80px);
@@ -255,21 +309,10 @@ text-shadow: 4px 4px 6px #ffffff;
   margin: 60px 0px 70px 30px;
 }
 
-
-
 /* 受験生の声 */
 #section-3 {
   width: 100%;
-  height: 600px;
-}
-
-#student-voice {
-  background-color: blue;
-  width: 860px;   
-  font-weight: bold;
-  font-family: 游ゴシック;
-  text-align: center;
-  margin: 75px auto 75px auto;
+  height: 890px;
 }
 
 /* 受講生の声1 */
