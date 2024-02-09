@@ -13,6 +13,29 @@ close.addEventListener('click', () => {
     navMenu.style.display = 'none';
   });
 
+
+// ナビゲーションメニューの各メニューをクリック後、それぞれの箇所に遷移させる
+const link_to_section2 = document.getElementById('link_to_section-2');
+link_to_section2.addEventListener('click', () => {
+    navMenu.style.display = 'none';
+  });
+ 
+const link_to_section3 = document.getElementById('link_to_section-3');
+link_to_section3.addEventListener('click', () => {
+    navMenu.style.display = 'none';
+  });
+
+const link_to_section4 = document.getElementById('link_to_section-4');
+link_to_section4.addEventListener('click', () => {
+    navMenu.style.display = 'none';
+  });
+
+const link_to_top = document.getElementById('link_to_top');
+link_to_top.addEventListener('click', () => {
+    navMenu.style.display = 'none';
+  });
+
+
 //   ここまでヘッダー
 
 

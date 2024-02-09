@@ -13,8 +13,8 @@ header {
 }
 
 #logo-bbb {
-  width: 120px; 
-  height: 60px;
+  width: 100px; 
+  height: 56px;
   margin-top: 30px;
   margin-left: 40px;
 }
@@ -34,15 +34,17 @@ header {
   position: fixed;
     right: 0;
     top: 0;
-  height: 100vh;
   width: 100%;
-  display: none;
+  height: 100vh;
+
+  display: flex;
+  justify-content: space-around;
   z-index: 100;
   }  
 
 #logo-BBB-white {
-  width: 120px; 
-  height: 60px;
+  width: 100px; 
+  height: 56px;
   position: fixed;
   top: 40px;
   left: 40px;
@@ -51,9 +53,15 @@ header {
 /* ☓マークのロゴ */
 #close {
   position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 70px;  
+   top: 20px;
+   right: 20px;
+  width: 75px;  
+  height: 75px;
+}
+
+#close > span {
+font-size: 16px;
+color: #ffffff;
 }
 
 #menu {
@@ -61,15 +69,66 @@ header {
   list-style: none;
   color: white;
   text-align: center;
-  margin-top: 130px;
+  margin-top: 72px;
   font-family: "游ゴシック";
   font-size: 25px;
   font-weight: bold;  
 }
 
 .menu-list {
-  margin: 20px;
+  margin: 7px;
 }
+
+.menu-list > a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  letter-spacing: 1.6px;
+}
+
+#menu > a {
+  width: 220px;
+  text-decoration: none;
+  color: #ffffff;
+  letter-spacing: 1.6px;
+  font-size: 16px;
+  padding: 15px;
+  display: block;  
+  border: solid 1px #ffffff;
+  margin-top: 35px;
+  /* 1つ下のabsoluteに対応 */
+  position: relative;
+}
+
+#menu > a::before {
+  width: 220px;
+  text-decoration: none;
+  color: #ffffff;
+  letter-spacing: 1.6px;
+  font-size: 16px;
+  padding: 15px;
+  display: block;
+  /*　↓の数行は、1つ上のmenu > aのcssに追加したプロパティ */
+  content: "";  
+  position: absolute;
+  top: 6px;
+  bottom: -6px;
+  right: -6px;
+  left: 6px;
+  border-bottom: solid 1px #ffffff;
+  border-right: solid 1px #ffffff;
+  z-index: -1;  /*←← menu > aの下に重ねるため */
+}
+
+/*hover状態で「無料体験に申し込む」が赤に */
+ #menu > a:hover {
+  color: #ff2a2a;
+  background-color: #ffffff; 
+  border: solid 3px #ff2a2a;  
+  }
+
+
+
 
 /* ここからmain */
 
@@ -534,6 +593,7 @@ https://loglogme.com/news/news-1439/　　*/
 #section-4 {  
   width: 100%;
   height: 885px;
+  margin-bottom: 120px;
   /* ↓3行で背景画像を斜動かすアニメーション */
   background-image: url(/images/bg.gif); /* image url*/
   background-size: 700px 700px; /* image size */
@@ -597,11 +657,13 @@ https://loglogme.com/news/news-1439/　　*/
 
  #section-5 {
   width: 100%;
-  height: 700px;
+  height: 203px;
+  margin-bottom: 120px;
  }
 
- #section-5 > div {
-  background-color: blue;
+ #section-5 > div {  
+  display: block;
+  /* background-color: blue; */
   width: 860px;
   text-align: center;
   margin-left: auto;
@@ -610,7 +672,6 @@ https://loglogme.com/news/news-1439/　　*/
  
  #section-5 > div > h3 {
   font-size: 32px;
-  margin-top: 120px;
   margin-bottom: 8px;
  }
 
@@ -618,31 +679,49 @@ https://loglogme.com/news/news-1439/　　*/
   font-size: 18px;
   padding: 0;
   margin-top: 0;
+  margin-bottom: 10px;
  }
 
  #section-5 > div > a {
   font-size: 28px;
-  font-weight: bolder;
- 
-  background-color: #ff2a2a;
-     
+  font-weight: bolder; 
+  display: block;
+  background-color: #ff2a2a;  
   color: #ffffff; 
+  text-align: center;
   border-radius: 40px;
   padding: 15px;
-  margin-top: 0;
+  margin-top: 40px;
+  text-decoration: none;
  }
 
-
-
+  /*hover状態で「無料体験に申し込む」が赤に */
+  #section-5 > div > a:hover {
+  color: #ff2a2a;
+  background-color: #ffffff; 
+  border: solid 3px #ff2a2a;  
+  }
 
 /* ここからfooter */
 
-.flexbox-container {
-  display: flex;
-  justify-content: center;
+
+#footer {
+  background-color: #e8e8e8;
+  width: 100%;
+  height: 340px;
+  margin: 0;
 }
 
-.flexbox-item {
+#footer-div {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 35px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-menu {
   padding: 20px;
   margin: 20px;
 }
@@ -653,7 +732,30 @@ https://loglogme.com/news/news-1439/　　*/
   margin: 0;
 }
 
-#copyright {
-  margin: 0 auto;    
-  text-align: center;
+.delete > li {
+  font-size: 14px;
+  margin-bottom: 5px;
 }
+
+.delete > li > a {
+  text-decoration: none;
+  color: black;
+}
+
+.delete > li > a:hover{
+  color: rgb(135, 131, 131);
+}
+
+.footer-menu > p {
+  font-size: 15px;
+  font-weight: bolder;  
+  letter-spacing: 1.6px;
+}
+
+#copyright {
+  display: block;
+  text-align: center;
+  font-size: 10px;
+  
+} 
+

@@ -21,22 +21,30 @@
         
         <nav id="nav-menu">
             <img id="logo-BBB-white" src="images/logo-r-white.svg">
-            <!-- ☓マークのロゴ -->
-            <img id="close" src="images/sozai_cman_jp_20240204123324.png" alt="ナビゲーションを閉じる">
+            <!-- ☓マーク -->
+            <div id="close">
+              <span>☓</span>
+            </div>
+
+            <!-- <img id="close" src="images/sozai_cman_jp_20240204123324.png" alt="ナビゲーションを閉じる"> -->
             
             <ul id="menu">
                 <li class="menu-list">
-                    <a>BBBが選ばれる理由</a>
+                    <a id="link_to_section-2" href="index.html#section-2">BBBが選ばれる理由</a>
                 </li>
                 <li class="menu-list">
-                    <a>受講生の声</a>
+                    <a id="link_to_section-3" href="index.html#section-3">受講生の声</a>
                 </li>
                 <li class="menu-list">
-                    <a>スクールの概要</a>    
+                    <a id="link_to_section-4" href="index.html#section-4">スクールの概要</a>    
                 </li>
-                <li class="menu-list">
-                    <a>無料体験に申し込む</a>    
-                </li>
+
+                <a id="link_to_top" href="#">無料体験に申し込む</a>    
+
+                
+                <!-- <li class="menu-list">
+                    <a id="link_to_top" href="#">無料体験に申し込む</a>    
+                </li> -->
             </ul>      
         </nav>
     </header>
@@ -154,55 +162,86 @@
             <div>              
                 <h3>まずは無料で、BBBの英会話を試してみませんか？</h3>            
                 <p>今なら初月のレッスンを特別価格で受講できる割引クーポンをプレゼント！</p>
-                <a>無料体験に申し込む</a>
+                <a href="#">無料体験に申し込む</a>
+                
+              
+              
             </div>
         </section>
       
     </main>
 
-    <footer>
-        <div  class="flexbox-container">
-            <div class="flexbox-item">
-                <p>コース一覧</p>
-                <ul class="delete">
-                    <li>スタンダードプラン</li>
-                    <li>プレミアムプラン</li>
-                    <li>短期集中プラン</li>
-                    <li>日常英会話コース</li>
-                    <li>ビジネス英会話コース</li>
-                </ul>
-            </div>
-            
-            <div class="flexbox-item">
-                <p>講師紹介</p>
-                <ul class="delete">
-                    <li>講師について</li>
-                    <li>講師一覧</li>
-                    <li>講師を探す</li>
-                </ul>
-            </div>
+    <footer id="footer">
+      <div id="footer-div">
+        <div class="footer-menu">
+            <p>コース一覧</p>
+            <ul class="delete" class="list">                
+                <li>
+                  <a href="#">スタンダードプラン</a>
+                </li>
+                <li>
+                  <a href="#">プレミアムプラン</a>
+                </li>
+                <li>
+                    <a href="#">短期集中プラン</a>
+                </li>
+                <li>
+                    <a href="#">日常英会話コース</a>
+                </li>
+                <li>
+                    <a href="#">ビジネス英会話コース</a>
+                </li>
+            </ul>
+        </div>
 
-            <div class="flexbox-item">
-                <p>会社情報</p>
-                <ul class="delete">
-                    <li>会社概要</li>
-                    <li>採用情報</li>                    
-                </ul>
-            </div>
+        <div class="footer-menu">
+            <p>講師紹介</p>
+            <ul class="delete">
+                 <li>
+                  <a href="#">講師について</a>
+                </li>
+                <li>
+                  <a href="#">講師一覧</a>
+                </li>
+                <li>
+                    <a href="#">講師を探す</a>
+                </li>
+            </ul>
+        </div>
 
-            <div class="flexbox-item">
-                <p>BBBについて</p>
-                <ul class="delete">
-                    <li>よくあるご質問</li>
-                    <li>ご利用規約</li>
-                    <li>プライバシーポリシー </li>
-                    <li>お問い合わせ</li>                
-                </ul>
-            </div>
-        </div>        
-        <p id="copyright">&copy; BBB English School</p>
-    </footer>
-    
+        <div class="footer-menu">
+            <p>会社情報</p>
+            <ul class="delete">
+                <li>
+                    <a href="#">会社概要</a>
+                  </li>
+                  <li>
+                    <a href="#">採用情報</a>
+                  </li>         
+            </ul>
+        </div>
+
+        <div class="footer-menu">
+            <p>BBBについて</p>
+            <ul class="delete">
+                  <li>
+                    <a href="#">よくあるご質問</a>
+                  </li>
+                  <li>
+                    <a href="#">ご利用規約</a>
+                  </li>
+                  <li>
+                      <a href="#">プライバシーポリシー</a>
+                  </li>
+                  <li>
+                      <a href="#">お問い合わせ</a>
+                  </li>          
+            </ul>
+        </div>
+      </div>
+
+      <p id="copyright">&copy; BBB English School</p>
+    </footer>    
     <!-- ヘッダーのロゴ（'logo-menu','close')をクリック後のイベント処理をjsに書いたので、bodyの最後に書いておく -->
     <script src="js/script.js"></script>  
     
