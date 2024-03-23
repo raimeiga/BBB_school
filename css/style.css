@@ -2,6 +2,9 @@ body {
   font-family: 游ゴシック;  
   margin: 0;
   padding: 0;
+  max-width: 1080px;
+  min-width: 960px;
+  margin: 0 auto 0 auto;
 }
 
 header {
